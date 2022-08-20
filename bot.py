@@ -28,6 +28,9 @@ def get_number(message):
     number = message.text
     if message.text in protect:
         bot.send_message(message.from_user.id,"Try again !")
+    elif len(message.text) != 10 and message.text != int:
+
+    	bot.send_message(message.from_user.id,"Please enter a valid number")
     else:
         bot.send_message(message.from_user.id, 'Input msg count:')
         bot.register_next_step_handler(message, get_count)
