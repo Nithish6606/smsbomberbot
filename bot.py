@@ -53,6 +53,6 @@ def get_count(message):
 
 while True:
 	try:
-		bot.polling(True)
+		bot.infinity_polling()
 	except Exception:
 		time.sleep(1)
